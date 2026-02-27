@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace CidatAPP.Domain.Enums
 {
-    internal class Status
+    public enum Status
     {
+        Inativo = 0,
+        Ativo = 1,
+        Bloqueado = 2
+
     }
 }

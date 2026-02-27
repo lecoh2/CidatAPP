@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace CidatAPP.Domain.Entities
 {
-    internal class GrupoNiveis
+    public class GrupoNiveis
     {
+        public Guid IdNivel { get; set; } = Guid.NewGuid();
+       public Guid IdUsuario { get; set;}
+        public Usuario Usuario { get; set; }
+        public Niveis Niveis { get; set; }
     }
 }
