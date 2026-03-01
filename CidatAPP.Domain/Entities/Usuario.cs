@@ -12,13 +12,16 @@ namespace CidatAPP.Domain.Entities
     {
         #region Propriedades / Atribuots
         public string Nome { get; set; } = string.Empty;
+        public string? Login { get; set; } = string.Empty;
         public string Senha { get; set; } = string.Empty;
         public DateTime? DataCadastro { get; set; }
         public DateTime? DataAtualizacao { get; set; }
         #endregion
         #region Relacionamentos
         public Status? Status { get; set; }
+        public ICollection<GrupoSetores> GrupoSetores { get; set; }
         public ICollection<GrupoNiveis> GrupoNiveis { get; set; }
+        public virtual Fotos? Fotos { get; set; }
         #endregion
     }
 }
