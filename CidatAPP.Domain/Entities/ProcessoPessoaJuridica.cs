@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CidatAPP.Domain.Entities
 {
-    public class ProcessoPessoJuridica : Processo
+    public class ProcessoPessoaJuridica : Processo
     {
         
         public string? CNPJ { get; set; }

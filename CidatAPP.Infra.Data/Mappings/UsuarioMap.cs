@@ -16,7 +16,7 @@ namespace CidatAPP.Infra.Data.Mappings
             builder.ToTable("USUARIO");
 
             builder.HasKey(u => u.Id);
-            builder.Property(u => u.Id).HasColumnName("IdUSUARIO");
+            builder.Property(u => u.Id).HasColumnName("IDUSUARIO");
             builder.Property(u => u.Login).HasColumnName("LOGIN");
             builder.Property(u => u.Senha).HasColumnName("SENHA");
             builder.Property(u => u.DataCadastro).HasColumnName("DATACADASTRO");

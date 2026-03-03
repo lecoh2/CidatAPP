@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using CidatAPP.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,20 @@ namespace CidatAPP.Infra.Data.Contexts
         {
 
         }
+        public DbSet<LoginHistory> LoginHistory { get; set; }
+        public DbSet<FailedLoginAttempt> FailedLoginAttempts { get; set; }
+        public DbSet<Setor> Setor { get; set; }
+        public DbSet<Niveis> Niveis { get; set; } 
+        public DbSet<Usuario> Usuario { get; set; }
+        public DbSet<Endereco> Endereco { get; set; }
+        public DbSet<Fotos> Fotos { get; set; }
+        public DbSet<GrupoNiveis> GrupoNiveis { get; set; }
+        public DbSet<GrupoSetores> GrupoSetores { get; set; }
+        public DbSet<OutrosAssuntos> OutrosAssuntos { get; set; }   
+        public DbSet<Processo> Processos { get; set; }  
+        public DbSet<ProcessoPessoaFisica> ProcessoPessoaFisica { get; set; }   
+        public DbSet<ProcessoPessoaJuridica> ProcessoPessoaJuridica { get; set; }  
+        public DbSet<OutrosOrgaos> OutrosOrgaos { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // Adiciona todas as classes de mapeamento do Fluent API

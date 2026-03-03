@@ -9,13 +9,12 @@ namespace CidatAPP.Domain.Utils
     /// <summary> 
     /// Representa o resultado paginado de uma consulta. 
     /// </summary> 
-    public class PageResult<TEntity> where TEntity : class
+    public class PageResult<T> 
     {
         /// <summary> 
         /// Coleção de itens (entidade) retornados  na página atual da consulta
         /// </summary> 
-        public IEnumerable<TEntity> Items { get; set; }
-                = new List<TEntity>();
+        public IEnumerable<T> Items { get; set; } = new List<T>();
 
         /// Número da página atual da consulta       
         public int PageNumber { get; set; }
@@ -27,7 +26,7 @@ namespace CidatAPP.Domain.Utils
         public int TotalCount { get; set; }
         /// Quantidade total de páginas, calculado com base no TotalCount e PageSize
         public int TotalPages => (int)Math.Ceiling
-((double)TotalCount / PageSize);
+ ((double)TotalCount / PageSize);
         /// Indica se existe uma próxima página após a atual
         public bool HasNextPage => PageNumber < TotalPages;
         /// Indica se existe uma página anterior à atual. 

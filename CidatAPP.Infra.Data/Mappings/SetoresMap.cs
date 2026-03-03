@@ -17,7 +17,7 @@ namespace CidatAPP.Infra.Data.Mappings
             builder.ToTable("SETORES");
             builder.HasKey(s => s.Id);
             builder.Property(s => s.Id).HasColumnName("IDSETOR");
-            builder.Property(s => s.NomeSetor).HasColumnName("NOMESETOR").HasMaxLength(255).IsRequired();
+            builder.Property(s => s.NomeSetor).HasColumnName("NOMESETOR").HasMaxLength(255);
 
         }
     }

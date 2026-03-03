@@ -16,8 +16,7 @@ namespace CidatAPP.Infra.Data.Mappings
             builder.ToTable("NIVEL");
             builder.HasKey(n => n.Id);
             builder.Property(n => n.Id).HasColumnName("IDNIVEL").IsRequired();
-            builder.Property(n => n.NomeNivel).HasColumnName("NOMENIVEL").IsRequired();
-            // builder.Property(n => n.Status).HasColumnName("STATUS").IsRequired();
+            builder.Property(n => n.NomeNivel).HasColumnName("NOMENIVEL").IsRequired();    
         }
     }
 }

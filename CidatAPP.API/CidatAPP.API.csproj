@@ -17,10 +17,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="NovaPasta\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\CidatAPP.Infra.Data\CidatAPP.Infra.Data.csproj" />
   </ItemGroup>
 

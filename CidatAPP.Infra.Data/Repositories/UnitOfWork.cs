@@ -11,15 +11,28 @@ using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace CidatAPP.Infra.Data.Repositories
 {
-    public class UnitOfWork(DataContext dataContext) : IUnitOfWork
+    public class UnitOfWork : IUnitOfWork
     {
+
+         //atributo para armazenar o contexto 
+        private readonly DataContext _datacontext;
+
+    //construtor para injeção de dependência 
+    public UnitOfWork(DataContext datacontext)
+    {
+        _datacontext = datacontext;
+    }
+
+        #region Repositórios
+        #endregion
+
         private IDbContextTransaction? transaction;
     
         public void BegionTransaction()
         {
         if (transaction != null)
             return;
-            transaction = dataContext.Database.BeginTransaction();
+            transaction = _datacontext.Database.BeginTransaction();
         }
 
         public void Commit()

@@ -1,3 +1,4 @@
+using CidatAPP.API.Extensions;
 using CidatAPP.Infra.Data.Extensions;
 using Scalar.AspNetCore;
 
@@ -8,6 +9,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+//Injeção de dependências 
+builder.Services.AddInfraStructure(builder.Configuration);
 //SWAGGER
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

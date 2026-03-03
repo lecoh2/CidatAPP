@@ -1,4 +1,5 @@
 ﻿using CidatAPP.Domain.Commons;
+using CidatAPP.Domain.Enums;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -34,7 +35,11 @@ namespace CidatAPP.Domain.Entities
         public Guid IdAdvogado { get; set; }
         public Guid IdEstagiario { get; set; }
         public Guid IdDocumento { get; set; }
-        public Guid IdRetorno { get; set; }
+        public Endereco? Endereco { get; set; }
+        #region Enumerdores
+        public Retorno? Retorno{ get; set; }
+        #endregion
+     
 
         #endregion
     }
